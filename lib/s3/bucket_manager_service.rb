@@ -20,6 +20,11 @@ module S3
                                             response_content_disposition: 'Attachment').to_s
     end
 
+    def self.file_exists?(bucket_name, filename)
+      return false if Rails.env == 'test' || Rails.env == 'development'
+      get_bucket(bucket_name).objects[filename].exists?
+    end
+
     # Returns a JSON with the following attrs: base_url, AWSAccessKeyId, key, policy, signature
     # and Content-Type.
     # filename: name of the s3_object to be created. Must be a uniq key

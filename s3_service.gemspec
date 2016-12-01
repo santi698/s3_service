@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 's3_service'
-  s.version     = '0.0.0'
+  s.version     = '0.1.0'
   s.date        = '2016-12-01'
   s.summary     = 'A service to help doing file related tasks on S3'
   s.description = 'A service to help doing file related tasks on S3'

@@ -17,6 +17,10 @@ module S3
       "https://example.com/#{bucket_name}/#{filename}"
     end
 
+    def self.file_exists?(bucket_name, filename)
+      return false
+    end
+
     # Returns a JSON with the following attrs: base_url, AWSAccessKeyId, key, policy, signature
     # and Content-Type.
     # filename: name of the s3_object to be created. Must be a uniq key
